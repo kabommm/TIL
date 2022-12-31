@@ -4,17 +4,19 @@
 
 ---
 
+## Algorithm
+
 ## CS
 
 - 자료구조
-
-- Algorithm
 
 - 운영체제
 
 - 컴퓨터구조
 
-## DB
+- Database
+
+- Network
 
 ## Language
 
