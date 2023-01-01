@@ -22,6 +22,8 @@
 
 - JAVA
 
+- JavaScript
+
 ## Spring
 
 - Annotation
