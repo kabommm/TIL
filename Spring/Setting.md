@@ -4,8 +4,6 @@
 
 - <https://start.spring.io/>에 접속
 
-<img src="https://user-images.githubusercontent.com/103254904/210129231-a85014ec-db40-43a1-9b74-caaac95ebb0c.PNG" width="700" height="370">
-
 ![](https://github.com/kabommm/TIL/blob/main/Spring/img/setting.PNG?raw=true)
 
 - 위 그림을 참고하여 설정 후 GENERATE
