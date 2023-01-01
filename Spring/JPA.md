@@ -2,6 +2,8 @@
 
 > Java Persistence API - Java 언어를 통해서 데이터베이스와 같은 영속 계층을 처리하고자 하는 스펙
 
+![](https://github.com/kabommm/TIL/blob/main/Spring/img/JPA.PNG)
+
 ## ORM
 
 - ORM(Object Relational Mapping)은 객체지향 패러다임을 관계형 데이터베이스에 보존하는 기술
@@ -40,8 +42,26 @@ Spring Data Jpa를 사용하면 기본으로 엔티티 매니저가 활성화되
 - Entity Class - 자바 클래스에 @Entity 어노테이션을 붙여, 테이블과 매핑한다고 JPA에게 알려주는 클래스다.
   엔티티 클래스에서 만들어진 객체를 엔티티라고 한다.
 
-- Repository - Spring Data JPA에서 제공하는 인터페이스로 설계하는데 스프링 내부에서 자동으로 객체를 생성하고 실행하는 구조
+## JpaRepository
+
+- JpaRepository - Spring Data JPA에서 제공하는 인터페이스로 설계하는데 스프링 내부에서 자동으로 객체를 생성하고 실행하는 구조
+
+```
+public interface MemoRepository extends JpaRepository<Memo, Long> {
+}
+```
+
+- JpaRepository를 사용할 때는 엔티티의 타입 정보(Memo 클래스 타입)와 @Id의 타입을 지정
+- JpaRepository가 활용하는 CRUD 메서드
+
+  - insert 작업: save(엔티티 객체)
+  - select 작업: findById(키 타입), getOne(키 타입)
+  - update 작업: save(엔티티 객체)
+  - delete 작업: deleteById(키 타입), dlelete(엔티티 객체)
+
+  ![](https://github.com/kabommm/TIL/blob/main/Spring/img/JpaRepository.PNG)
 
 ### 출처
 
 - <https://velog.io/@modsiw/JPAJava-Persistence-API%EC%9D%98-%EA%B0%9C%EB%85%90>
+- <https://velog.io/@hermaeus/7.JpaRepository-%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4>
