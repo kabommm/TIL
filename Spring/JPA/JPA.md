@@ -52,6 +52,9 @@ public interface MemoRepository extends JpaRepository<Memo, Long> {
 ```
 
 - JpaRepository를 사용할 때는 엔티티의 타입 정보(Memo 클래스 타입)와 @Id의 타입을 지정
+
+  ![](https://github.com/kabommm/TIL/blob/main/Spring/img/JpaRepository.PNG)
+
 - JpaRepository가 활용하는 CRUD 메서드
 
   - insert 작업: save(엔티티 객체)
@@ -59,7 +62,71 @@ public interface MemoRepository extends JpaRepository<Memo, Long> {
   - update 작업: save(엔티티 객체)
   - delete 작업: deleteById(키 타입), dlelete(엔티티 객체)
 
-  ![](https://github.com/kabommm/TIL/blob/main/Spring/img/JpaRepository.PNG)
+  - 등록
+
+  ```
+    @Test
+    public void testInsertDummies(){
+        IntStream.rangeClosed(1,100).forEach(i -> {
+            Memo memo = Memo.builder().memoText("Sample..."+i).build(); //MemoText는 Not Null이므로 반드시 데이터를 넣어줌
+            memoRepository.save(memo);
+        });
+    }
+  ```
+
+  - 조회
+
+  ```
+    @Test
+        public void testSelect(){
+
+            Long mno = 100L;    //DB에 존재하는 mno
+            //findById()는 Optional 타입으로 반환되기 때문에 한번 더 결과가 존재하는지를 체크하는 형태로 작성
+            Optional<Memo> result = memoRepository.findById(mno);
+
+            System.out.println("----------------------");
+
+            if(result.isPresent()){
+                Memo memo = result.get();
+                System.out.println(memo);
+            }
+        }
+
+        @Test
+        @Transactional
+        public void testSelect2(){
+
+            Long mno = 100L;    //DB에 존재하는 mno
+        //getOne()은 트랜잭션 어노테이션이 필요, 실제 객체가 필요한 순간까지 SQL을 실행하지 않는다.
+            Memo memo = memoRepository.getOne(mno);
+
+            System.out.println("----------------------");
+
+            System.out.println(memo);
+        }
+  ```
+
+  - 수정
+
+  ```
+      @Test
+          public void testUpdate(){   //100번의 Memo객체의 memoText를 업데이트로 변경
+                  Memo memo = Memo.builder().mno(100L).memoText("업데이트").build();
+                  System.out.println(memoRepository.save(memo));
+
+          }
+  ```
+
+  - 삭제
+
+  ```
+      @Test
+      public void testDelete(){
+          Long mno = 100L;    //DB에 존재하는 mno
+          memoRepository.deleteById(mno);
+
+      }
+  ```
 
 ### 출처
 
