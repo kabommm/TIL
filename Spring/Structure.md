@@ -43,18 +43,8 @@ DTO와 엔티티 객체의 역할
 - 3. 위에서 작성한 엔티티를 상속받는 또는 그냥 엔티티 클래스를(2번 없는 경우) 생성
 - 4. Repository 인페이스 생성
 JpaRepository를 상속받는 인터페이스로 구성
-- 5. DTO
+- 5. ![DTO](https://github.com/kabommm/TIL/blob/main/Spring/DTO.md)
 
-DTO는 엔티티 객체와 달리 각 계층끼리 주고받는 우편물이나 상자의 개념입니다.
-
-엔티티와 유사한 점: 순수하게 데이터를 담고 있다.
-
-엔티티와 다른 점: 목적 자체가 데이터의 전달이므로 읽고, 쓰는 것이 모두 허용되고 일회성으로 사용되는 성격이 강하다.
-그렇기 때문에 엔티티와 DTO는 분리해서 처리한다.
-
-DTO는 엔티티와 거의 동일한 필드들을 가지고 getter/setter를 통해 자유롭게 값을 변경할 수 있게 구성합니다.
- - DTO -> Entity 변환
- JPA로 처리하기 위해서는 반드시 엔티티 타입의 객체로 변환해야 한다.
 - 6. Service 계층
 서비스 계증에서는 DTO를 이용해서 필요한 내용을 전달받고, 반환하도록 처리하는데 Service인터페이스와 ServiceImpl 클래스를 작성합니다.
 - Service interface와 ServiceImpl class 구조를 사용하는 이유?
