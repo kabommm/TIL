@@ -49,3 +49,7 @@ spring.thymeleaf.cache=false
 ## 4. gitignore 설청
 
 .gitignore에 src/main/resources/application.properties 추가
+
+## 5. etc
+
+-AuditingEntityListener를 활성화 시키려면 Application 클래스에 @EnableJpaAuditing 추가
