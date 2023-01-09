@@ -153,5 +153,7 @@ Map<Boolean, List<Product>> mapPartitioned = productList.stream()
 
 ## 참고
 <https://mangkyu.tistory.com/114>
+
 <https://sabarada.tistory.com/41>
+
 <https://codechacha.com/ko/java8-stream-collect/>
