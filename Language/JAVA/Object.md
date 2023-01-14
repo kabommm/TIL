@@ -51,3 +51,7 @@ clone() 메소드는 해당 인스턴스를 복제하여, 새로운 인스턴스
 ## void wait()
 
 실행을 중지하고 대기 상태로 간다.
+
+## 참고
+<https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=reach_reach&logNo=90119089674>
+<http://www.tcpschool.com/java/java_api_object>
