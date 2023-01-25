@@ -29,9 +29,15 @@ String 클래스와 같은 불변 클래스는 StringBuffer 클래스의 append(
 
 즉, 하나의 객체에 접근하면서 각각의 객체가 서로 영향을 주어서는 안 되는 경우에 불변 인스턴스를 사용하면 값이 변하지 않는다는 점이 보장됩니다.
 
+## StringBuilder vs StringBuffer
+
+멀티쓰레드 환경 외에는 StringBuilder 성능이 좋으므로 StringBuilder사용
+
+
+
 ## 메소드
 
-- append() 메소드
+- append(값) 메소드
 
 append() 메소드는 인수로 전달된 값을 문자열로 변환한 후, 해당 문자열의 마지막에 추가합니다.
 
@@ -63,7 +69,7 @@ System.out.println(str02.capacity()); //20
 
 길이가 4인 문자열로 StringBuffer 인스턴스를 생성하면, 기본적으로 생성되는 여유 버퍼 크기인 16에 문자의 길이인 4를 더한 총 20개의 문자를 저장할 수 있는 버퍼가 생성
 
-- delete() 메소드
+- delete(인덱스, 인덱스) 메소드
 
 delete() 메소드는 전달된 인덱스에 해당하는 부분 문자열을 해당 문자열에서 제거합니다.
 
@@ -83,7 +89,7 @@ System.out.println(str.deleteCharAt(1));  //Jvacle
 System.out.println("deleteCharAt() 메소드 호출 후 원본 문자열 : " + str);  //deleteCharAt() 메소드 호출 후 원본 문자열 : Jvacle
 ```
 
-- insert() 메소드
+- insert(인덱스, 값) 메소드
 
 insert() 메소드는 인수로 전달된 값을 문자열로 변환한 후, 해당 문자열의 지정된 인덱스 위치에 추가합니다.
 
@@ -99,6 +105,12 @@ System.out.println("원본 문자열 : " + str);  //원본 문자열 : Java 만�
 System.out.println("insert() 메소드 호출 후 원본 문자열 : " + str);  //insert() 메소드 호출 후 원본 문자열 : JavaScript 만세!!
 ```
 
+- reverse() 메소드
+
+글자 순서를 뒤집는다.
+
 ## 참고 
 
 <http://www.tcpschool.com/java/java_api_stringBuffer>
+
+<https://wakestand.tistory.com/245>
