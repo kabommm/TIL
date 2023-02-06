@@ -220,6 +220,32 @@ System.out.println( replaceFirstTest.replaceFirst("리플레이스","replaceFirs
         System.out.println( str.contains("java test") );  // true
 ```
 
+- repeat
+문자열을 반복하는 메소드
+
+```
+public class Repeat {
+	public static void main(String[] args) {
+		// String 및 StringBuilder 호출
+		String str = "Hello";
+		StringBuilder sb = new StringBuilder();
+		
+		// 반복문을 사용하여 문자열 반복
+		for(int i = 0; i < 3; i++)
+		{
+			sb.append(str);
+		}
+		
+		// 결과 출력 -> for문
+		System.out.println("for문 : " + sb);
+		// 결과 출력 -> repeat 사용
+		System.out.println("repeat문 : " + str.repeat(3));
+	}
+}
+```
+
+for문을 통해 문자열을 반복하는방법과 repeat로 반복하는 방법 두가지를 예시로 들었다.
+
 ## 참고
 <https://velog.io/@rlaghwns1995/Java-String-%EA%B4%80%EB%A0%A8-%EB%82%B4%EC%9E%A5%ED%95%A8%EC%88%98>
 <https://cceeun.tistory.com/32>
