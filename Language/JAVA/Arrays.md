@@ -96,12 +96,13 @@ for (int i = 0; i < arr.length; i++) {
 
 ## sort() 메소드
 
-sort() 메소드는 전달받은 배열의 모든 요소를 오름차순으로 정렬합니다.
+sort() 메소드는 전달받은 배열의 모든 요소를 오름차순또는 내림차순으로 정렬합니다.
 
 ```
 int[] arr = {5, 3, 4, 1, 2};
 
-Arrays.sort(arr);
+Arrays.sort(arr);   //오름차순
+Arrays.sort(arr, Collections.reverseOrder());   //내림차순
 
 for (int i = 0; i < arr.length; i++) {
     System.out.print(arr[i] + " "); // 1 2 3 4 5
