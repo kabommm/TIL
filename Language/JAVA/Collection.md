@@ -152,6 +152,10 @@ List와 Set 인터페이스는 모두 Collection 인터페이스를 상속받지
 ## HashMap`<K, V>` 클래스 메소드
 ![](https://github.com/kabommm/TIL/blob/main/Language/img/HashMap.PNG)
 
++ 메소드 추가
+- getOrDefault("A",false)
+A가 있다면 A의 value를반환 A가 없다면 false반환
+
 ### Hashtable`<K, V>` 클래스
 
 HashMap 클래스에서 사용할 수 있는 메소드와 거의 같습니다. 하지만 현재에는 기존 코드와의 호환성을 위해서만 남아있으므로, Hashtable 클래스보다는 HashMap 클래스를 사용하는 것이 좋습니다.
