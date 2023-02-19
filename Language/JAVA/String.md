@@ -220,6 +220,22 @@ System.out.println( replaceFirstTest.replaceFirst("리플레이스","replaceFirs
         System.out.println( str.contains("java test") );  // true
 ```
 
+- matches
+
+특정 패턴의 문자열을 포함하는지 확인할 수 있습니다. 특정 패턴이란 정규표현식(Regex)를 의미합니다. 문자열에 정규표현식이 일치하는지를 boolean으로 리턴합니다.
+
+```
+String str = "my java test";
+//정규표현식 사용 안할때 정확히 일치해야 한다
+System.out.println( str.matches("java") ); // false
+System.out.println( str.matches("my java Test") ); // false (대/소문자 역시 구분한다.)
+System.out.println( str.matches("my java test") ); // true
+//정규표현식 사용
+System.out.println( str.matches(".*java.*") ); // true
+System.out.println( str.matches("(.*)test") ); // true
+System.out.println( str.matches("^[0-9]*$") ); // false
+```
+
 - repeat
 문자열을 반복하는 메소드
 
@@ -248,6 +264,11 @@ for문을 통해 문자열을 반복하는방법과 repeat로 반복하는 방�
 
 ## 참고
 <https://velog.io/@rlaghwns1995/Java-String-%EA%B4%80%EB%A0%A8-%EB%82%B4%EC%9E%A5%ED%95%A8%EC%88%98>
+
 <https://cceeun.tistory.com/32>
+
 <https://mine-it-record.tistory.com/127>
+
 <http://www.tcpschool.com/java/java_api_string>
+
+<https://velog.io/@dnjsgml418/method-matches-%EB%AC%B8%EC%9E%90%EC%97%B4-%ED%8C%A8%ED%84%B4-%ED%99%95%EC%9D%B8-%EC%A0%95%EA%B7%9C%EC%8B%9D>
