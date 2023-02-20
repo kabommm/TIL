@@ -79,6 +79,10 @@ Car(String modelName, int modelYear, String color, int maxSpeeds) {
 
 자바 컴파일러는 컴파일 시 클래스에 생성자가 하나도 정의되어 있지 않으면, 자동으로 다음과 같은 기본 생성자를 추가합니다.
 
+# 최대공약수&최소공배수
+
+최소공배수 = a * b(주어진 두 수의 곱)  /   최대 공약수
+
 ## 참고
 <http://www.tcpschool.com/java/java_modifier_ectModifier>
 
