@@ -25,3 +25,5 @@
 - 삽입 정렬
 - 버블 정렬
 - 선택 정렬
+
+![](https://github.com/kabommm/TIL/blob/main/Algorithm/img/Time%20Complexity.png)
