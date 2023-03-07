@@ -166,8 +166,11 @@ List와 Set 인터페이스는 모두 Collection 인터페이스를 상속받지
 ## HashMap`<K, V>` 클래스 메소드
 ![](https://github.com/kabommm/TIL/blob/main/Language/img/HashMap.PNG)
 
-+ 메소드 추가
+### 메소드 추가
+
 - getOrDefault("A",false)
+
+get을 사용했는데 Key 값이 없으면 오류가 나기 때문에 매번 Key의 유무를 확인해야 하는 번거로움이 있다 하지만 getOrDefault를 사용하면 
 A가 있다면 A의 value를반환 A가 없다면 false반환
 
 ### Hashtable`<K, V>` 클래스
