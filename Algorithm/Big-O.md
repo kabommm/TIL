@@ -23,6 +23,8 @@
 
 코드를 짜고 나서 -> 시간 복잡도 효율이 더 좋은(작은) 방식으로 가능한지 확인
 
+![](https://github.com/kabommm/TIL/blob/main/Algorithm/img/Data%20Structure.png)
+
 2. 기본 자료구조(배열, 리스트) 탐색
 
 문제가 요구하는 조건에 따라 두 자료구조의 특징 중 적절한 자료구조를 선택한다. 
