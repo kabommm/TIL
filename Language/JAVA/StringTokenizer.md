@@ -67,6 +67,10 @@ public class Main {
 }
 ```
 
+## StringTokenizer 메서드
+
+![](https://github.com/kabommm/TIL/blob/main/Language/img/StringTokenizer.PNG)
+
 ## 여러 문자를 구분자로 사용하기
 
 ```
