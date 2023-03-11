@@ -55,6 +55,14 @@ java.io에 정의된 인터페이스와 클래스 명칭을 보면 바이트 단
   BufferedReader는 readLine()메소드를 가집니다.
   
   readLine메서드는 텍스트를 한 줄씩 읽어 String형의 반환 값으로 돌려줍니다.
+  
+- BufferedReader를 사용할 경우 단점
+
+1. IOException의 예외처리가 필요하다.(main함수 우측에 throws IOException를 통해서 예외처리를 해야 한다.)
+
+2. 입력 데이터들이 String으로 반환된다.
+
+3. 데이터들을 재가공(데이터를 split 후 형 변환 등등...)
 
 ## Writer
 
