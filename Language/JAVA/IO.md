@@ -84,3 +84,5 @@ java.io에 정의된 인터페이스와 클래스 명칭을 보면 바이트 단
 <http://www.incodom.kr/java/java.io>
 
 Reader/Writer 메소드: <https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=qbxlvnf11&logNo=221140609067>
+
+BufferedReader를 사용할 경우 단점: <https://cocoon1787.tistory.com/582>
