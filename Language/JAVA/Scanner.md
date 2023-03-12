@@ -31,6 +31,16 @@ Scanner sc = new Scanner(System.in); // Scanner 객체 생성
 
 System.in 은 사용자로부터 입력을 받기 위한 입력 스트림이다.
 
+- hasNext(): 조건문에서 사용하는 Scanner 메서드
+
+hasNext()에 Boolean, Double, Int 등등 자료형이 붙은 건 입력된 값이 그 자료형일 경우에는 true값을 반환하고 아닐 경우 false를 반환하는 함수이다.
+
+예를 들어 hasNextInt() 값을 출력할 때 정수가 들어오면 true, 입력이 없거나 정수 외의 값이 들어올 경우 false를 반환한다.
+
+> hasNext() 문제 예시
+
+- A+B - 4(백준 10951)
+
 ## Escape Sequence
 
 print 즉, 출력할 때 큰 따옴표 ( " ) 나 백슬래시 ( \ ) 는 단독으로 써서 출력할 수가 없다.
